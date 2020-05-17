@@ -1,9 +1,6 @@
 import React from 'react';
-
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 import { Container } from './styles';
-
 import Logo from '../../assets/logo.svg';
 
 interface HeaderProps {
@@ -15,9 +12,12 @@ const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
     <header>
       <img src={Logo} alt="GoFinances" />
       <nav>
-        {
-          // Todo
-        }
+        <NavLink to="/" exact activeClassName="active">
+          Listagem
+        </NavLink>
+        <NavLink to="/import" exact activeClassName="active">
+          Importar
+        </NavLink>
       </nav>
     </header>
   </Container>
